@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página no encontrada — BLOOM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root { --blue:#598eff; --bg:#080810; --surface:#10101e; --text:#e8e8f2; --text2:#9898b8; --text3:#5a5a7a; }
+  [data-theme="light"] { --bg:#f5f5fa; --surface:#fff; --text:#0c0c18; --text2:#4a4a6a; --text3:#8888aa; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Figtree',sans-serif; background:var(--bg); color:var(--text); min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:2rem; }
+  .wrap { max-width:480px; }
+  .logo { font-size:1.5rem; font-weight:800; color:var(--blue); letter-spacing:-0.03em; margin-bottom:3rem; display:flex; align-items:center; justify-content:center; gap:8px; text-decoration:none; }
+  .num { font-family:'Playfair Display',serif; font-size:8rem; font-weight:700; line-height:1; color:var(--blue); opacity:0.15; user-select:none; }
+  h1 { font-family:'Playfair Display',serif; font-size:1.8rem; font-weight:700; margin-bottom:0.75rem; margin-top:-1.5rem; }
+  p { color:var(--text2); font-size:0.95rem; line-height:1.6; margin-bottom:2rem; }
+  .btn { display:inline-block; background:var(--blue); color:#fff; padding:0.75rem 2rem; border-radius:99px; font-weight:700; font-size:0.95rem; text-decoration:none; transition:opacity .2s; }
+  .btn:hover { opacity:0.85; }
+  .link { display:block; margin-top:1rem; color:var(--text3); font-size:0.85rem; text-decoration:none; }
+  .link:hover { color:var(--blue); }
+  @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+  .flower { animation:float 3s ease-in-out infinite; display:inline-block; font-size:4rem; margin-bottom:1rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="logo" href="/">
+    <svg width="22" height="22" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+      <g transform="translate(20,20)">
+        <ellipse cx="0" cy="-9" rx="4" ry="7" fill="#598eff" opacity="0.95" transform="rotate(0)"/>
+        <ellipse cx="0" cy="-9" rx="4" ry="7" fill="#7aaeff" opacity="0.85" transform="rotate(51.4)"/>
+        <ellipse cx="0" cy="-9" rx="4" ry="7" fill="#598eff" opacity="0.9" transform="rotate(102.8)"/>
+        <ellipse cx="0" cy="-9" rx="4" ry="7" fill="#3a6fe0" opacity="0.85" transform="rotate(154.2)"/>
+        <ellipse cx="0" cy="-9" rx="4" ry="7" fill="#598eff" opacity="0.9" transform="rotate(205.6)"/>
+        <ellipse cx="0" cy="-9" rx="4" ry="7" fill="#7aaeff" opacity="0.85" transform="rotate(257)"/>
+        <ellipse cx="0" cy="-9" rx="4" ry="7" fill="#3a6fe0" opacity="0.9" transform="rotate(308.4)"/>
+        <circle cx="0" cy="0" r="5" fill="#fff" stroke="#598eff" stroke-width="1.5"/>
+        <circle cx="0" cy="0" r="3" fill="#598eff"/>
+      </g>
+    </svg>
+    BLOOM<sup style="font-size:0.5em">®</sup>
+  </a>
+  <div class="flower">🌸</div>
+  <div class="num">404</div>
+  <h1>Página no encontrada</h1>
+  <p>La página que buscás no existe o fue movida.<br>Pero tenemos muchos productos que te van a encantar.</p>
+  <a class="btn" href="/">Volver a la tienda →</a>
+  <a class="link" href="javascript:history.back()">← Volver atrás</a>
+</div>
+<script>
+  try {
+    var t = localStorage.getItem('bloom_theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', t);
+  } catch(e) {}
+</script>
+</body>
+</html>
