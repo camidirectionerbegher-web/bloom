@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://camidirectionerbegher-web.github.io/bloom/sitemap.xml
