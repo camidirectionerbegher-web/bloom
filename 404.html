@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página no encontrada — Alicia en el País</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red:#c0392b; --red-dark:#8f2a1f; --amber:#e0961e; --blue:#3f7ca6;
+    --bg:#efe4cd; --surface:#ffffff; --text:#0c0c1e; --text2:#463b2c; --text3:#5c5346;
+  }
+  [data-theme="dark"] {
+    --bg:#181410; --surface:#241e18; --text:#f5ede2; --text2:#cbbba9; --text3:#9c8b78;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family:'Figtree',Arial,sans-serif;
+    background:var(--bg); color:var(--text);
+    min-height:100vh; display:flex; align-items:center; justify-content:center;
+    text-align:center; padding:2rem; transition:background .3s,color .3s;
+  }
+  .wrap { max-width:480px; }
+  .logo {
+    font-family:'Playfair Display',serif; font-size:1.6rem; font-weight:700;
+    color:var(--red); letter-spacing:-0.02em; margin-bottom:3rem;
+    display:flex; align-items:center; justify-content:center; gap:8px; text-decoration:none;
+  }
+  .logo sup { font-size:0.45em; color:var(--text3); font-weight:400; font-family:'Figtree',sans-serif; }
+  .num {
+    font-family:'Playfair Display',serif; font-size:8rem; font-weight:700; line-height:1;
+    color:var(--red); opacity:0.15; user-select:none;
+  }
+  h1 { font-family:'Playfair Display',serif; font-size:1.8rem; font-weight:700; margin-bottom:0.75rem; margin-top:-1.5rem; }
+  p { color:var(--text2); font-size:0.95rem; line-height:1.6; margin-bottom:2rem; }
+  .btn {
+    display:inline-block; background:var(--red); color:#fff; padding:0.75rem 2rem;
+    border-radius:99px; font-weight:700; font-size:0.95rem; text-decoration:none;
+    box-shadow:0 4px 20px rgba(192,57,43,0.35); transition:background .2s,transform .2s;
+  }
+  .btn:hover { background:var(--red-dark); transform:translateY(-1px); }
+  .link { display:block; margin-top:1rem; color:var(--text3); font-size:0.85rem; text-decoration:none; }
+  .link:hover { color:var(--red); }
+  @keyframes float { 0%,100%{transform:translateY(0) rotate(-4deg)} 50%{transform:translateY(-10px) rotate(4deg)} }
+  .yarn { animation:float 3s ease-in-out infinite; display:inline-block; font-size:4rem; margin-bottom:1rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="logo" href="/">
+    <svg width="26" height="26" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="63" cy="61" r="25" fill="#3f7ca6"/>
+      <path d="M40 61 Q63 40 88 55" stroke="#c0392b" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M42 72 Q63 84 86 70" stroke="#c0392b" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M46 43 Q66 61 50 82" stroke="#c0392b" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M39 61 Q30 74 18 76 Q10 77 12 84" stroke="#c0392b" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+      <circle cx="12" cy="85" r="3.4" fill="none" stroke="#c0392b" stroke-width="3"/>
+      <path d="M17 34 L25 10 L38 30 Z" fill="#e0961e"/>
+      <path d="M38 30 L48 8 L57 28 Z" fill="#e0961e"/>
+      <path d="M21 29 L26 17 L33 28 Z" fill="#faf6ee"/>
+      <path d="M41 28 L47 15 L52 27 Z" fill="#faf6ee"/>
+      <circle cx="36" cy="42" r="19" fill="#e0961e"/>
+      <circle cx="29" cy="41" r="2.6" fill="#0c0c1e"/>
+      <circle cx="43" cy="41" r="2.6" fill="#0c0c1e"/>
+      <path d="M34 47 L38 47 L36 50 Z" fill="#e8334a"/>
+      <path d="M18 44 L28 45 M18 50 L28 48" stroke="#faf6ee" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M54 44 L44 45 M54 50 L44 48" stroke="#faf6ee" stroke-width="1.6" stroke-linecap="round"/>
+      <ellipse cx="49" cy="58" rx="8" ry="6.5" fill="#e0961e" transform="rotate(-25 49 58)"/>
+      <circle cx="44" cy="53" r="2.4" fill="#e0961e"/>
+      <circle cx="49" cy="51" r="2.4" fill="#e0961e"/>
+      <circle cx="54" cy="53" r="2.4" fill="#e0961e"/>
+    </svg>
+    Alicia en el País
+  </a>
+  <div class="yarn">🧶</div>
+  <div class="num">404</div>
+  <h1>Página no encontrada</h1>
+  <p>La página que buscás no existe o fue movida.<br>Pero tenemos hilos, telas, botones y mucho más esperándote.</p>
+  <a class="btn" href="/">Volver a la mercería →</a>
+  <a class="link" href="javascript:history.back()">← Volver atrás</a>
+</div>
+<script>
+  try {
+    var t = localStorage.getItem('bloom_theme') || 'light';
+    document.documentElement.setAttribute('data-theme', t);
+  } catch(e) {}
+</script>
+</body>
+</html>
